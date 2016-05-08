@@ -140,10 +140,14 @@ if __name__ == '__main__':
     try:
         vcf_f = sys.argv[1]
     except:
-        sys.exit("Usage : ./parse_snpeff.py VCF.gz > FILE.txt")
+        sys.exit("Usage : ./parse_snpeff.py [VCF.gz]\n\n\
+            [VCF.gz]  : Tabix indexed SNPeff VCF file\n\
+            ")
 
     if not isfile(vcf_f):
-        sys.exit("Usage : ./parse_snpeff.py VCF.gz > FILE.txt")
+        sys.exit("Usage : ./parse_snpeff.py [VCF.gz]\n\n\
+            [VCF.gz]  : Tabix indexed SNPeff VCF file\n\
+            ")
 
     columns = get_columns_from_vcf(vcf_f)
     samples = columns[9:]

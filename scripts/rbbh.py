@@ -172,7 +172,14 @@ if __name__ == "__main__":
 		evalue_theshold = float(sys.argv[5])
 		cov_theshold = float(sys.argv[6])
 	except:
-		sys.exit("./rbbh.py [BLAST1] [FASTA1] [BLAST2] [FASTA2] [EVAL] [COV]")
+		sys.exit("Usage: ./rbbh.py [BLAST1] [FASTA1] [BLAST2] [FASTA2] [EVAL] [COV]\n\n\
+			[BLAST1] : BLAST result of G. pallida vs. G. rostochiensis\n\
+			[FASTA1] : Protein sequences of G. pallida\n\
+			[BLAST2] : BLAST result of G. rostochiensis vs. G. pallida\n\
+			[FASTA2] : Protein sequences of G. rostochiensis\n\
+			[EVAL]   : Float of minimal evalue theshold of BLAST hit\n\
+			[COV]    : Float of minimal coverage threshold of BLAST hit\n\
+			")
 
 	rbhCollection = RbhCollection()
 	rbhCollection.parse_blast(blasts)
