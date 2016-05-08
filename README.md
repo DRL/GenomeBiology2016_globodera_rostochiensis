@@ -43,5 +43,5 @@ Usage: ./parse_iadhore.py [GROS_BED] [GROS_LENGTH] [GPAL_BED] [GPAL_LENGTH] [ANC
 ```
 Usage : ./parse_snpeff.py [VCF.gz]
 
-            [VCF.gz]  : Tabix indexed VCF file
+            [VCF.gz]  : Tabix indexed SNPeff VCF file
 ```
